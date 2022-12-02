@@ -1,0 +1,87 @@
+SQL HACKER RANK ( Subdomain = Basic Select )
+
+(1) 
+SELECT * FROM city
+WHERE countrycode ="USA" AND population > 100000;
+
+(2)
+SELECT name
+FROM city
+WHERE countrycode ="USA" and population >120000;
+
+
+(3)
+SELECT * FROM city
+where id =1661;
+
+(4)
+SELECT * FROM City WHERE COUNTRYCODE = 'JPN';
+
+(5)
+
+SELECT city,state FROM station;
+ 
+(6)
+SELECT DISTINCT city FROM station   ( EVEN NUMBER MOD(ID,2)=0  ODD NUMBER MOD (ID,2)!= 0)
+WHERE MOD(ID,2)=0;
+
+(7)
+SELECT COUNT(city)-COUNT(DISTINCT city)
+FROM station;
+
+(8)
+SELECT DISTINCT(city), LENGTH(City) 
+FROM station 
+ORDER BY LENGTH(city) ASC LIMIT 1;   ( for finding city with minimum length)
+
+SELECT DISTINCT(city), LENGTH(city) 
+FROM station
+ORDER BY LENGTH(city) DESC LIMIT 1;  ( for finding city with maximum length)
+
+(9)
+
+SELECT distinct (city)
+FROM station
+WHERE LEFT (city,1) IN ('a','e','i','o','u');  (first character is vowel )
+
+(10)
+
+SELECT distinct (city)
+FROM station
+WHERE RIGHT (city,1) IN ('a','e','i','o','u'); (last character is vowel )
+
+(11)
+SELECT DISTINCT(city)
+FROM station
+WHERE LEFT(city,1) IN ('a','e','i','o','u') AND  
+RIGHT(city,1) IN ('a','e','i','o','u');          (first & last character is vowel )
+
+(12)
+
+SELECT distinct (city)
+FROM station
+WHERE LEFT (city,1)  NOT IN ('a','e','i','o','u'); ( first character not vowel )
+
+(13)
+
+SELECT name FROM students 
+WHERE marks > 75 
+ORDER BY RIGHT(name,3), ID ASC;    (ordering output based on last 3 characters and if they are same sort by ID asc)
+
+(14)
+
+SELECT name 
+FROM employee
+ORDER BY name asc;
+
+(15)
+
+SELECT name
+FROM employee
+WHERE salary >2000 AND months <10
+ORDER BY employee_id ASC;
+
+
+
+
+
